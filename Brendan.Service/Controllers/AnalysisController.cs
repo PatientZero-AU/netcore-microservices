@@ -4,11 +4,11 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Paul.Service.Controllers
+namespace Brendan.Service.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ValuesController : ControllerBase
+    public class AnalysisController : ControllerBase
     {
         // GET api/values
         [HttpGet]
