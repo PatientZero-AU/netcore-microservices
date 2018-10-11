@@ -7,6 +7,6 @@
   </PropertyGroup>
   <Target Condition="'$(ProjectExt)' != '.dcproj'" Name="NSwag2" AfterTargets="Build" >
     <Exec Command="$(NSwagExe_Core21) webapi2swagger /assembly:&quot;$(TargetPath)&quot; /defaultPropertyNameHandling:camelcase /output:&quot;$(ProjectDir)../swagger/$(TargetName).json&quot;" />
-    <Exec Command="$(NSwagExe_Core21) swagger2csclient /input:&quot;$(ProjectDir)../swagger/%(ProjectToScan.Filename).json&quot; /namespace:$(ProjectName).ApiClients.$(Service_Name) /InjectHttpClient:true /GenerateClientInterfaces:true /ResponseArrayType:System.Collections.Generic.IEnumerable /DisposeHttpClient:false /ClassName:$(Service_Name) /OperationGenerationMode:SingleClientFromOperationId /output:&quot;ApiClients\$(Service_Name).cs&quot;" />
+    <Exec Command="$(NSwagExe_Core21) swagger2csclient /input:&quot;$(ProjectDir)../swagger/%(ProjectToScan.Filename).json&quot; /UseBaseUrl:false /namespace:$(ProjectName).ApiClients.$(Service_Name) /InjectHttpClient:true /GenerateClientInterfaces:true /ResponseArrayType:System.Collections.Generic.IEnumerable /DisposeHttpClient:false /ClassName:$(Service_Name) /OperationGenerationMode:SingleClientFromOperationId /output:&quot;ApiClients\$(Service_Name).cs&quot;" />
   </Target>
 </Project>

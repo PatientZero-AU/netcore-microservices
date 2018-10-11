@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Paul.Service.Controllers
 {
@@ -7,31 +8,27 @@ namespace Paul.Service.Controllers
     [ApiController]
     public class AdviceController : ControllerBase
     {
-        [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
-        {
-            return new string[] { "value1", "value2" };
-        }
+        private static int errCount = 0;
 
-        [HttpGet("{id}")]
-        public ActionResult<string> Get(int id)
+        [HttpGet]
+        public async Task<IActionResult> Get()
         {
-            return "value";
+            return Ok( new string[] { "Blah 1", "Blah 2" } );
         }
 
         [HttpPost]
-        public void Post([FromBody] string value)
+        public async Task<IActionResult> Post()
         {
+            if (errCount > 3)
+                return Ok();
+            ++errCount;
+            throw new System.Exception();
         }
 
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        [HttpPut]
+        public async Task<IActionResult> Put()
         {
-        }
-
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
+            throw new System.Exception();
         }
     }
 }
