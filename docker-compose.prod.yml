@@ -1,0 +1,30 @@
+version: '3.4'
+
+services:
+  brendan-service:
+    image: brendan-service:latest
+    build:
+      context: .
+      dockerfile: Brendan.Service/Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - ASPNETCORE_URLS=http://+:80
+    ports:
+      - "3001:80"
+
+  dan-service:
+    image: dan-service:latest
+    build:
+      context: .
+      dockerfile: Dan.Service/Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - ASPNETCORE_URLS=http://+:80
+    ports:
+      - "3002:80"
+
+  paul-service:
+    image: paul-service:latest
+    build:
+      context: .
+      dockerfile: Paul.Service/Dockerfile
