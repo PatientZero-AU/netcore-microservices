@@ -38,7 +38,7 @@ namespace Dan.Service
             {
                 c.SwaggerDoc("v1", new Info { Title = "Dan's API", Version = "v1" });
             });
-            
+
             services
                 .AddTransient<CorrelationIdDelegatingHandler>()
                 .AddHttpClient<PaulServiceClient>(client => client.BaseAddress = new Uri(Configuration["ServiceUrls:PaulService"]))
@@ -49,12 +49,13 @@ namespace Dan.Service
                 .AddHttpMessageHandler<CorrelationIdDelegatingHandler>()
                 ;
 
-            services.AddHealthChecks(checks =>
+            services.AddDistributedRedisCache(opt =>
             {
-                
+                opt.Configuration = "redis";
+                opt.InstanceName = "Redis";
             });
         }
-        
+
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {

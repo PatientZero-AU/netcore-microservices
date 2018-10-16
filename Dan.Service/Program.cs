@@ -47,7 +47,6 @@ namespace Dan.Service
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-                .UseHealthChecks("/health")
                 .UseStartup<Startup>()
                 .UseSerilog();
     }
