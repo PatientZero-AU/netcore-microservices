@@ -1,0 +1,1 @@
+var response = await client.GetAsync("http://<paul-endpoint>/api/advice", cancellationToken);

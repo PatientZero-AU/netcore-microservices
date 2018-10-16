@@ -1,0 +1,10 @@
+services.AddCorrelationId(); // make first line
+
+services
+    .AddTransient<CorrelationIdDelegatingHandler>()
+    .AddHttpClient<PaulServiceClient>(client => client.BaseAddress = new Uri(Configuration["ServiceUrls:PaulService"]))
+    .AddTransientHttpErrorPolicy(builder =>
+        builder.WaitAndRetryAsync(4, retryAttempt => TimeSpan.FromSeconds(Math.Pow(2, retryAttempt))))
+    .AddTransientHttpErrorPolicy(builder =>
+        builder.CircuitBreakerAsync(handledEventsAllowedBeforeBreaking: 3, durationOfBreak: TimeSpan.FromSeconds(60)))
+    .AddHttpMessageHandler<CorrelationIdDelegatingHandler>()

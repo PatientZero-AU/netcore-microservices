@@ -1,0 +1,6 @@
+seq:
+  image: "datalust/seq"
+    environment:
+    ACCEPT_EULA: "Y"
+  ports:
+    - "5342:80"

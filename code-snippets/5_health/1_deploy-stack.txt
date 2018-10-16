@@ -1,0 +1,2 @@
+docker-compose -f "C:\Users\Daniel\source\repos\PZ.Services\docker-compose.prod.yml" -p net_meetup build
+docker stack deploy -c "C:\Users\Daniel\source\repos\PZ.Services\docker-compose.prod.yml" net_meetup

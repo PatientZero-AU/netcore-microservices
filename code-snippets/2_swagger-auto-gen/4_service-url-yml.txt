@@ -1,0 +1,2 @@
+environment:
+  ServiceUrls__PaulService: "http://paul-service"

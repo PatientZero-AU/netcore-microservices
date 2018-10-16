@@ -14,6 +14,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		Directory.Build.props = Directory.Build.props
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{551ADA9B-9D29-45F3-85FD-540C25171EFB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pz.Shared", "Pz.Shared\Pz.Shared.csproj", "{08C4CD1A-5AB9-4AC0-A210-4AF9DA08E537}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,8 +36,18 @@ Global
 		{94135C2B-8FA3-45AA-A254-76A532B7D3B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{94135C2B-8FA3-45AA-A254-76A532B7D3B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{94135C2B-8FA3-45AA-A254-76A532B7D3B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08C4CD1A-5AB9-4AC0-A210-4AF9DA08E537}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08C4CD1A-5AB9-4AC0-A210-4AF9DA08E537}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08C4CD1A-5AB9-4AC0-A210-4AF9DA08E537}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08C4CD1A-5AB9-4AC0-A210-4AF9DA08E537}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{08C4CD1A-5AB9-4AC0-A210-4AF9DA08E537} = {551ADA9B-9D29-45F3-85FD-540C25171EFB}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {202B1B26-3110-4B25-AB0F-E7496FCA30C9}
 	EndGlobalSection
 EndGlobal

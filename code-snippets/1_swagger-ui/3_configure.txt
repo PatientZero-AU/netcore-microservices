@@ -1,0 +1,5 @@
+app.UseSwagger();
+app.UseSwaggerUI(c =>
+								{
+									c.SwaggerEndpoint("/swagger/v1/swagger.json", "Paul's API V1");
+								});

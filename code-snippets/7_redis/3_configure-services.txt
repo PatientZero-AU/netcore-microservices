@@ -1,0 +1,5 @@
+services.AddDistributedRedisCache(opt =>
+    {
+	    opt.Configuration = "redis";
+		opt.InstanceName = "Redis";
+	});

@@ -1,0 +1,6 @@
+[HttpGet]
+public async Task<IActionResult> Get([FromServices] PaulServiceClient paul, CancellationToken cancellationToken)
+{
+    var paulsResponse = await paul.Advice_GetAsync(cancellationToken);
+    return Ok($"Paul says {string.Join(", ", paulsResponse)}");
+}

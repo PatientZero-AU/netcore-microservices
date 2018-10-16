@@ -1,0 +1,4 @@
+services
+    .AddHttpClient<PaulServiceClient>(client => client.BaseAddress = new Uri(Configuration["ServiceUrls:PaulService"]))
+	.AddTransientHttpErrorPolicy(builder =>
+	    builder.WaitAndRetryAsync(4, retryAttempt => TimeSpan.FromSeconds(Math.Pow(2, retryAttempt))))

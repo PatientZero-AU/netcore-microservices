@@ -29,6 +29,10 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="3.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Pz.Shared\Pz.Shared.csproj" />
+  </ItemGroup>
+
   <!--<Target Name="NSwag2" AfterTargets="BeforeBuild" >
     <Exec Condition="Exists('$(ProjectDir)../swagger/Paul.Service.json')" Command="$(NSwagExe_Core21) swagger2csclient /input:&quot;$(ProjectDir)../swagger/Paul.Service.json&quot; /namespace:Pz.ApiClients /InjectHttpClient:true /GenerateClientInterfaces:true /ResponseArrayType:System.Collections.Generic.IEnumerable /DisposeHttpClient:false /GenerateExceptionClasses:true /ClassName:PaulClient /OperationGenerationMode:SingleClientFromOperationId /output:&quot;ApiClients\PaulClient.cs&quot;" />
   </Target>-->

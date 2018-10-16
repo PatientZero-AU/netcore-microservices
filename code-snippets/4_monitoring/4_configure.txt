@@ -1,0 +1,1 @@
+app.UseCorrelationId(new CorrelationIdOptions { UseGuidForCorrelationId = true });
