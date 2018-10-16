@@ -35,7 +35,7 @@ namespace Dan.Service
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Dan's API V1");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Dan API V1");
             });
         }
     }

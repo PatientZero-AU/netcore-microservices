@@ -36,7 +36,7 @@ namespace Brendan.Service
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Brendan's API V1");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Brendan API V1");
             });
         }
     }
