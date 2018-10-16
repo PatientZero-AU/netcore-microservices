@@ -5,8 +5,8 @@
   <PropertyGroup>
     <Service_Name>@(ProjectToScan->'%(Filename)'->Replace('.', ''))Client</Service_Name>
   </PropertyGroup>
-  <Target Condition="'$(ProjectExt)' != '.dcproj' AND '$(ProjectName)' != 'Pz.Shared'" Name="NSwag2" AfterTargets="Build" >
-    <Exec Command="$(NSwagExe_Core21) webapi2swagger /assembly:&quot;$(TargetPath)&quot; /defaultPropertyNameHandling:camelcase /output:&quot;$(ProjectDir)../swagger/$(TargetName).json&quot;" />
-    <Exec Command="$(NSwagExe_Core21) swagger2csclient /input:&quot;$(ProjectDir)../swagger/%(ProjectToScan.Filename).json&quot; /UseBaseUrl:false /namespace:$(ProjectName).ApiClients.$(Service_Name) /InjectHttpClient:true /GenerateClientInterfaces:true /ResponseArrayType:System.Collections.Generic.IEnumerable /DisposeHttpClient:false /ClassName:$(Service_Name) /OperationGenerationMode:SingleClientFromOperationId /output:&quot;ApiClients\$(Service_Name).cs&quot;" Condition="%(ProjectToScan.Filename) != 'Pz.Shared'" />
+  <Target Condition="'$(ProjectExt)' != '.dcproj'" Name="NSwag2" AfterTargets="Build" >
+    <Exec Command="$(NSwagExe_Core21) webapi2swagger /assembly:&quot;$(TargetPath)&quot; /defaultPropertyNameHandling:camelcase /output:&quot;$(ProjectDir)../swagger/$(TargetName).json&quot;" Condition="'$(ProjectName)' != 'Pz.Shared'" />
+    <Exec Command="$(NSwagExe_Core21) swagger2csclient /input:&quot;$(ProjectDir)../swagger/%(ProjectToScan.Filename).json&quot; /UseBaseUrl:false /namespace:$(ProjectName).ApiClients.$(Service_Name) /InjectHttpClient:true /GenerateClientInterfaces:true /ResponseArrayType:System.Collections.Generic.IEnumerable /DisposeHttpClient:false /ClassName:$(Service_Name) /OperationGenerationMode:SingleClientFromOperationId /output:&quot;ApiClients\$(Service_Name).cs&quot;" Condition="%(ProjectToScan.Filename) != 'Pz.Shared' AND '$(ProjectName)' == 'Pz.Shared'" />
   </Target>
 </Project>
