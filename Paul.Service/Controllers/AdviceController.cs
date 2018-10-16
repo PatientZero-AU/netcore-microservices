@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System.Collections.Generic;
+using System;
 using System.Threading.Tasks;
 
 namespace Paul.Service.Controllers
@@ -19,16 +19,28 @@ namespace Paul.Service.Controllers
         [HttpPost]
         public async Task<IActionResult> Post()
         {
-            if (errCount > 3)
-                return Ok();
-            ++errCount;
-            throw new System.Exception();
+            SucceedIfRetried(3);
+            return Ok();
         }
 
         [HttpPut]
         public async Task<IActionResult> Put()
         {
-            throw new System.Exception();
+            Fail();
+            return Ok();
+        }
+
+        private void SucceedIfRetried(int attempts)
+        {
+            if (errCount > attempts)
+                return;
+            ++errCount;
+            throw new Exception();
+        }
+
+        private void Fail()
+        {
+            throw new Exception();
         }
     }
 }
