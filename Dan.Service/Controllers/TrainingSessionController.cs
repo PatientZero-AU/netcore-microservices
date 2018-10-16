@@ -6,6 +6,10 @@ namespace Dan.Service.Controllers
     [ApiController]
     public class TrainingSessionController : ControllerBase
     {
-
+        [HttpGet]
+        public ActionResult Get()
+        {
+            return Ok();
+        }
     }
 }
