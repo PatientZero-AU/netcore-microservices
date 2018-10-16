@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace Dan.Service.Controllers
 {
@@ -7,7 +9,7 @@ namespace Dan.Service.Controllers
     public class TrainingSessionController : ControllerBase
     {
         [HttpGet]
-        public ActionResult Get()
+        public async Task<IActionResult> Get(CancellationToken cancellationToken)
         {
             return Ok();
         }
