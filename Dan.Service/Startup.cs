@@ -48,12 +48,6 @@ namespace Dan.Service
                     builder.CircuitBreakerAsync(handledEventsAllowedBeforeBreaking: 3, durationOfBreak: TimeSpan.FromSeconds(60)))
                 .AddHttpMessageHandler<CorrelationIdDelegatingHandler>()
                 ;
-
-            services.AddDistributedRedisCache(opt =>
-            {
-                opt.Configuration = "redis";
-                opt.InstanceName = "Redis";
-            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
