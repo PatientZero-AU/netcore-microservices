@@ -1,2 +1,2 @@
 .AddTransientHttpErrorPolicy(builder => 
-    builder.CircuitBreakerAsync(handledEventsAllowedBeforeBreaking: 3, durationOfBreak: TimeSpan.FromSeconds(30)))
+    builder.CircuitBreakerAsync(handledEventsAllowedBeforeBreaking: 2, durationOfBreak: TimeSpan.FromSeconds(30)))
