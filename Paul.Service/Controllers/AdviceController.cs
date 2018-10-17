@@ -32,7 +32,7 @@ namespace Paul.Service.Controllers
 
         private void SucceedIfRetried(int attempts)
         {
-            if (errCount > attempts)
+            if (errCount >= attempts)
                 return;
             ++errCount;
             throw new Exception();
