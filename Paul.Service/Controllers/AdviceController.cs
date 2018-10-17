@@ -26,7 +26,7 @@ namespace Paul.Service.Controllers
         [HttpPut]
         public async Task<IActionResult> Put()
         {
-            Fail();
+            FailImmediately();
             return Ok();
         }
 
@@ -38,7 +38,7 @@ namespace Paul.Service.Controllers
             throw new Exception();
         }
 
-        private void Fail()
+        private void FailImmediately()
         {
             throw new Exception();
         }
