@@ -26,7 +26,7 @@ namespace Paul.Service.Controllers
         [HttpPut]
         public async Task<IActionResult> Put()
         {
-            FailImmediately();
+            await Fail();
             return Ok();
         }
 
@@ -38,8 +38,9 @@ namespace Paul.Service.Controllers
             throw new Exception();
         }
 
-        private void FailImmediately()
+        private async Task Fail()
         {
+            await Task.Delay(TimeSpan.FromSeconds(5));
             throw new Exception();
         }
     }
