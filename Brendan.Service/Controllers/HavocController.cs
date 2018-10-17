@@ -13,14 +13,11 @@ namespace Brendan.Service.Controllers
         {
             const int threads = 50;
 
-            Task.Run(() =>
+            Parallel.For(0, threads, i =>
             {
-                Parallel.For(0, threads, i =>
-                {
-                    while (true) ;
-                });
+                while (true) ;
             });
-            
+
             return Accepted();
         }
     }
