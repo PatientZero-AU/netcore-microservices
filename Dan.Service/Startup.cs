@@ -6,6 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Swashbuckle.AspNetCore.Swagger;
 using System;
 using Polly;
+using Pz.Shared;
 
 namespace Dan.Service
 {
@@ -22,7 +23,7 @@ namespace Dan.Service
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-
+            
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new Info { Title = "Dan's API", Version = "v1" });
