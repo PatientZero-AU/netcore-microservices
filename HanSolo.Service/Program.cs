@@ -7,7 +7,7 @@ using System;
 using System.IO;
 using System.Reflection;
 
-namespace Dan.Service
+namespace HanSolo.Service
 {
     public class Program
     {
@@ -26,11 +26,10 @@ namespace Dan.Service
                       .Enrich.FromLogContext()
                       .WriteTo.Console()
                       .CreateLogger();
-
-            Log.Logger.Information("Started");
-
+            
             try
             {
+                Log.Information("Started");
                 CreateWebHostBuilder(args).Build().Run();
                 return 0;
             }

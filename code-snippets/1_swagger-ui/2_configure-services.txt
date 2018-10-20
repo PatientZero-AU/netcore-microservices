@@ -1,4 +1,4 @@
 services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new Info { Title = "Paul's API", Version = "v1" });
+                c.SwaggerDoc("v1", new Info { Title = "Han Solo API", Version = "v1" });
             });

@@ -1,11 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
-namespace Dan.Service.Controllers
+namespace Alliance.Service.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class HavocController : ControllerBase
+    public class CommandersController : ControllerBase
     {
         [HttpPost]
         [ProducesResponseType(typeof(void), 202)]

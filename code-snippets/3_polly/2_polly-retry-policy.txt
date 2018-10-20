@@ -1,4 +1,4 @@
 services
-    .AddHttpClient<PaulServiceClient>(client => client.BaseAddress = new Uri(Configuration["ServiceUrls:PaulService"]))
+    .AddHttpClient<HanSoloServiceClient>(client => client.BaseAddress = new Uri(Configuration["ServiceUrls:HanSoloService"]))
 	.AddTransientHttpErrorPolicy(builder =>
 	    builder.WaitAndRetryAsync(3, retryAttempt => TimeSpan.FromSeconds(Math.Pow(2, retryAttempt))))

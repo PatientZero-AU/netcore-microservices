@@ -1,1 +1,1 @@
-var response = await client.GetAsync("http://<paul-endpoint>/api/advice", cancellationToken);
+var response = await client.GetAsync("http://<hansolo-endpoint>/api/MillenniumFalcon", cancellationToken);

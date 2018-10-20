@@ -4,7 +4,7 @@ namespace Empire.Service.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ImperialCitizensController : ControllerBase
+    public class DeathStarController : ControllerBase
     {
         [HttpGet]
         public ActionResult<string> Get(int id)

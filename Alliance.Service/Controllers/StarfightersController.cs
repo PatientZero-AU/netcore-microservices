@@ -2,14 +2,14 @@
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Dan.Service.Controllers
+namespace Alliance.Service.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class SomeController : ControllerBase
+    public class StarfightersController : ControllerBase
     {
-        //readonly PaulServiceClient _client;
-        //public SomeController(PaulServiceClient client)
+        //readonly HanSoloServiceClient _client;
+        //public StarfightersController(HanSoloServiceClient client)
         //{
         //    _client = client;
         //}
@@ -17,14 +17,14 @@ namespace Dan.Service.Controllers
         //[HttpPost]
         //public async Task<IActionResult> Post(CancellationToken cancellationToken)
         //{
-        //    var response = await _client.Advice_PostAsync();
+        //    var response = await _client.Chewbacca_PostAsync();
         //    return Ok();
         //}
 
         //[HttpPut]
         //public async Task<IActionResult> Put(CancellationToken cancellationToken)
         //{
-        //    var response = await _client.Advice_PutAsync();
+        //    var response = await _client.Chewbacca_PutAsync();
         //    return Ok();
         //}
     }

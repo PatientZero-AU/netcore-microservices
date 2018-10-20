@@ -2,11 +2,11 @@
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Dan.Service.Controllers
+namespace Alliance.Service.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class TrainingSessionController : ControllerBase
+    public class StarfleetController : ControllerBase
     {
         [HttpGet]
         public async Task<IActionResult> Get(CancellationToken cancellationToken)

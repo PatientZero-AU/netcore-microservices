@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28124.53
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Paul.Service", "Paul.Service\Paul.Service.csproj", "{7513FE2A-ACFD-4A15-A534-5299163897A0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HanSolo.Service", "HanSolo.Service\HanSolo.Service.csproj", "{7513FE2A-ACFD-4A15-A534-5299163897A0}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Empire.Service", "Empire.Service\Empire.Service.csproj", "{16CE3413-F7A6-41D8-A6C7-06DC7786CBE6}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dan.Service", "Dan.Service\Dan.Service.csproj", "{94135C2B-8FA3-45AA-A254-76A532B7D3B2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Alliance.Service", "Alliance.Service\Alliance.Service.csproj", "{94135C2B-8FA3-45AA-A254-76A532B7D3B2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5B664874-307F-49A2-9B46-308B7628B77C}"
 	ProjectSection(SolutionItems) = preProject
@@ -46,5 +46,8 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{08C4CD1A-5AB9-4AC0-A210-4AF9DA08E537} = {551ADA9B-9D29-45F3-85FD-540C25171EFB}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {518B20E6-62C0-409D-941D-9B688C9EDF9B}
 	EndGlobalSection
 EndGlobal

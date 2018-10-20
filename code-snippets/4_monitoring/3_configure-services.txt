@@ -2,7 +2,7 @@ services.AddCorrelationId(); // make first line
 
 services
     .AddTransient<CorrelationIdDelegatingHandler>()
-    .AddHttpClient<PaulServiceClient>(client => client.BaseAddress = new Uri(Configuration["ServiceUrls:PaulService"]))
+    .AddHttpClient<HanSoloServiceClient>(client => client.BaseAddress = new Uri(Configuration["ServiceUrls:HanSoloService"]))
     .AddTransientHttpErrorPolicy(builder =>
         builder.WaitAndRetryAsync(4, retryAttempt => TimeSpan.FromSeconds(Math.Pow(2, retryAttempt))))
     .AddTransientHttpErrorPolicy(builder =>

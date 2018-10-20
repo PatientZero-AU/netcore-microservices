@@ -19,19 +19,19 @@ services:
       retries: 3
       start_period: 40s
 
-  dan-service:
-    image: dan-service:latest
+  alliance-service:
+    image: alliance-service:latest
     build:
       context: .
-      dockerfile: Dan.Service/Dockerfile
+      dockerfile: Alliance.Service/Dockerfile
     environment:
       - ASPNETCORE_ENVIRONMENT=Production
       - ASPNETCORE_URLS=http://+:80
     ports:
       - "3002:80"
 
-  paul-service:
-    image: paul-service:latest
+  hansolo-service:
+    image: hansolo-service:latest
     build:
       context: .
-      dockerfile: Paul.Service/Dockerfile
+      dockerfile: HanSolo.Service/Dockerfile
