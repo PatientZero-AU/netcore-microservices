@@ -17,7 +17,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "Brendan.Service": {
+    "Empire.Service": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "api/values",
@@ -29,7 +29,7 @@
     "Docker": {
       "commandName": "Docker",
       "launchBrowser": true,
-      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/api/analysis"
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/api/ImperialCitizens"
     }
   }
 }

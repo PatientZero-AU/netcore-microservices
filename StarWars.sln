@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.28124.53
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Paul.Service", "Paul.Service\Paul.Service.csproj", "{7513FE2A-ACFD-4A15-A534-5299163897A0}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Brendan.Service", "Brendan.Service\Brendan.Service.csproj", "{16CE3413-F7A6-41D8-A6C7-06DC7786CBE6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Empire.Service", "Empire.Service\Empire.Service.csproj", "{16CE3413-F7A6-41D8-A6C7-06DC7786CBE6}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dan.Service", "Dan.Service\Dan.Service.csproj", "{94135C2B-8FA3-45AA-A254-76A532B7D3B2}"
 EndProject
@@ -16,7 +16,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{551ADA9B-9D29-45F3-85FD-540C25171EFB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pz.Shared", "Pz.Shared\Pz.Shared.csproj", "{08C4CD1A-5AB9-4AC0-A210-4AF9DA08E537}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pz.Shared", "Pz.Shared\Pz.Shared.csproj", "{08C4CD1A-5AB9-4AC0-A210-4AF9DA08E537}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

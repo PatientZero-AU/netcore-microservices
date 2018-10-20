@@ -1,10 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace Brendan.Service.Controllers
+namespace Empire.Service.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class AnalysisController : ControllerBase
+    public class ImperialCitizensController : ControllerBase
     {
         [HttpGet]
         public ActionResult<string> Get(int id)

@@ -1,11 +1,11 @@
 version: '3.4'
 
 services:
-  brendan-service:
-    image: brendan-service:latest
+  empire-service:
+    image: empire-service:latest
     build:
       context: .
-      dockerfile: Brendan.Service/Dockerfile
+      dockerfile: Empire.Service/Dockerfile
     environment:
       - ASPNETCORE_ENVIRONMENT=Production
       - ASPNETCORE_URLS=http://+:80

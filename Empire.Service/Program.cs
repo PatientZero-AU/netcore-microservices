@@ -7,7 +7,7 @@ using System;
 using System.IO;
 using System.Reflection;
 
-namespace Brendan.Service
+namespace Empire.Service
 {
     public class Program
     {

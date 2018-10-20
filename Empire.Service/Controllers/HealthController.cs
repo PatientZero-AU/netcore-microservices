@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace Brendan.Service.Controllers
+namespace Empire.Service.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

@@ -1,11 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
-namespace Brendan.Service.Controllers
+namespace Empire.Service.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class HavocController : ControllerBase
+    public class StormtroopersController : ControllerBase
     {
         [HttpPost]
         [ProducesResponseType(typeof(void), 202)]

@@ -5,7 +5,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Swashbuckle.AspNetCore.Swagger;
 
-namespace Brendan.Service
+namespace Empire.Service
 {
     public class Startup
     {
@@ -23,7 +23,7 @@ namespace Brendan.Service
 
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new Info { Title = "Brendan's API", Version = "v1" });
+                c.SwaggerDoc("v1", new Info { Title = "Galactic Empire API", Version = "v1" });
             });
         }
 
@@ -36,7 +36,7 @@ namespace Brendan.Service
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Brendan API V1");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Galactic Empire API V1");
             });
         }
     }
