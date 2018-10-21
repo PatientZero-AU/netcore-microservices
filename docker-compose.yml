@@ -1,12 +1,7 @@
 version: '3.4'
 
 services:
-  alliance-service:
-    image: alliance-service
-    build:
-      context: .
-      dockerfile: Alliance.Service/Dockerfile
-
+  
   hansolo-service:
     image: hansolo-service
     build:
