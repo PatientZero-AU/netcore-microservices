@@ -9,9 +9,10 @@ namespace HanSolo.Service.Controllers
     public class MillenniumFalconController : ControllerBase
     {
         [HttpGet]
-        public async Task<IActionResult> Get()
+        [ProducesResponseType(200, Type = typeof(string))]
+        public IActionResult Get()
         {
-            return Ok( new string[] { "Blah 1", "Blah 2" } );
+            return Ok("Second fastest vessel in the galaxy");
         }
     }
 }
