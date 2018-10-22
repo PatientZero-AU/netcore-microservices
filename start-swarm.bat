@@ -1,0 +1,1 @@
+docker stack deploy -c "C:\Users\Daniel\source\repos\StarWars\docker-compose.prod.yml" net_meetup
