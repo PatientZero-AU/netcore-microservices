@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Caching.Distributed;
 
 namespace Empire.Service.Controllers
 {
@@ -7,7 +8,7 @@ namespace Empire.Service.Controllers
     public class DeathStarController : ControllerBase
     {
         [HttpGet]
-        public ActionResult<string> Get(int id)
+        public ActionResult<string> Get()
         {
             return "Hello From Docker";
         }
