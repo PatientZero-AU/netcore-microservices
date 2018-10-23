@@ -25,6 +25,38 @@
         }
       }
     },
+    "/api/Starfighters": {
+      "post": {
+        "tags": [
+          "Starfighters"
+        ],
+        "operationId": "Starfighters_Post",
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Starfighters"
+        ],
+        "operationId": "Starfighters_Put",
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      }
+    },
     "/api/Starfleet": {
       "get": {
         "tags": [

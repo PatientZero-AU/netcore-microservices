@@ -55,7 +55,7 @@
             "x-nullable": true,
             "description": "",
             "schema": {
-              "type": "file"
+              "type": "string"
             }
           }
         }

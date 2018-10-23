@@ -26,11 +26,11 @@ namespace Pz.Shared.ApiClients.HanSoloServiceClient
         System.Threading.Tasks.Task<FileResponse> Chewbacca_PutAsync(System.Threading.CancellationToken cancellationToken);
     
         /// <exception cref="SwaggerException">A server side error occurred.</exception>
-        System.Threading.Tasks.Task<FileResponse> MillenniumFalcon_GetAsync();
+        System.Threading.Tasks.Task<string> MillenniumFalcon_GetAsync();
     
         /// <exception cref="SwaggerException">A server side error occurred.</exception>
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        System.Threading.Tasks.Task<FileResponse> MillenniumFalcon_GetAsync(System.Threading.CancellationToken cancellationToken);
+        System.Threading.Tasks.Task<string> MillenniumFalcon_GetAsync(System.Threading.CancellationToken cancellationToken);
     
     }
     
@@ -195,14 +195,14 @@ namespace Pz.Shared.ApiClients.HanSoloServiceClient
         }
     
         /// <exception cref="SwaggerException">A server side error occurred.</exception>
-        public System.Threading.Tasks.Task<FileResponse> MillenniumFalcon_GetAsync()
+        public System.Threading.Tasks.Task<string> MillenniumFalcon_GetAsync()
         {
             return MillenniumFalcon_GetAsync(System.Threading.CancellationToken.None);
         }
     
         /// <exception cref="SwaggerException">A server side error occurred.</exception>
         /// <param name="cancellationToken">A cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
-        public async System.Threading.Tasks.Task<FileResponse> MillenniumFalcon_GetAsync(System.Threading.CancellationToken cancellationToken)
+        public async System.Threading.Tasks.Task<string> MillenniumFalcon_GetAsync(System.Threading.CancellationToken cancellationToken)
         {
             var urlBuilder_ = new System.Text.StringBuilder();
             urlBuilder_.Append("api/MillenniumFalcon");
@@ -233,12 +233,19 @@ namespace Pz.Shared.ApiClients.HanSoloServiceClient
                         ProcessResponse(client_, response_);
     
                         var status_ = ((int)response_.StatusCode).ToString();
-                        if (status_ == "200" || status_ == "206") 
+                        if (status_ == "200") 
                         {
-                            var responseStream_ = response_.Content == null ? System.IO.Stream.Null : await response_.Content.ReadAsStreamAsync().ConfigureAwait(false);
-                            var fileResponse_ = new FileResponse((int)response_.StatusCode, headers_, responseStream_, null, response_); 
-                            client_ = null; response_ = null; // response and client are disposed by FileResponse
-                            return fileResponse_;
+                            var responseData_ = response_.Content == null ? null : await response_.Content.ReadAsStringAsync().ConfigureAwait(false); 
+                            var result_ = default(string); 
+                            try
+                            {
+                                result_ = Newtonsoft.Json.JsonConvert.DeserializeObject<string>(responseData_, _settings.Value);
+                                return result_; 
+                            } 
+                            catch (System.Exception exception_) 
+                            {
+                                throw new SwaggerException("Could not deserialize the response body.", (int)response_.StatusCode, responseData_, headers_, exception_);
+                            }
                         }
                         else
                         if (status_ != "200" && status_ != "204")
@@ -247,7 +254,7 @@ namespace Pz.Shared.ApiClients.HanSoloServiceClient
                             throw new SwaggerException("The HTTP status code of the response was not expected (" + (int)response_.StatusCode + ").", (int)response_.StatusCode, responseData_, headers_, null);
                         }
             
-                        return default(FileResponse);
+                        return default(string);
                     }
                     finally
                     {
