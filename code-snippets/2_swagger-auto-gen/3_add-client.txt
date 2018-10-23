@@ -1,2 +1,2 @@
 services
-    .AddHttpClient<HanSoloServiceClient>(client => client.BaseAddress = new Uri(Configuration["ServiceUrls:HanSoloService"]));
+    .AddHttpClient<HanSoloServiceClient>(client => client.BaseAddress = new Uri(Configuration["ServiceUrl:HanSoloService"]));

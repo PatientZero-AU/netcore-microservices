@@ -1,2 +1,2 @@
 environment:
-  ServiceUrls__HanSoloService: "http://hansolo-service"
+  ServiceUrl__HanSoloService: "http://hansolo-service"
