@@ -15,3 +15,9 @@ services:
       context: .
       dockerfile: Empire.Service/Dockerfile
 
+
+  alliance-service:
+    image: alliance-service
+    build:
+      context: .
+      dockerfile: Alliance.Service/Dockerfile
